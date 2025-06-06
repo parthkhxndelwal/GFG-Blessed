@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "GeeksforGeeks Quiz Recorder",
+  "version": "1.1",
+  "description": "Extract quiz questions and choices from GeeksforGeeks",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.geeksforgeeks.org/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Extract Quiz Question"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.geeksforgeeks.org/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
